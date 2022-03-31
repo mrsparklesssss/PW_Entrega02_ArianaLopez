@@ -1,0 +1,217 @@
+//1. Declaracion de variables
+$colorbase: white !default;
+$font1: Kare;
+$color1: #415394;
+$color2: #AE243B;
+
+:root{
+    background-color: $colorbase;
+}
+
+/*2. Estilos predefinidos*/
+
+@font-face{
+    font-family: Kare;
+    src: url('Kare.ttf') format('truetype');
+}
+
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin setDefaultTexto{
+    color: black;
+    font-family: 'Asap Condensed', sans-serif;
+}
+
+@mixin setParTexto{
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+}
+
+@mixin aChiquitas ($color2){
+    font-family: 'Asap Condensed', sans-serif;
+    font-weight: 600;
+    background-color: #415394;
+    color:white;
+    padding: 5px 13px;
+    margin-right: 7px;
+    border-radius: 8px;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0%;
+    padding: 0%;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: $colorbase;
+}
+
+#mainPage{
+    background-image: url(../img/banner2.png);
+    background-position: top left;
+    background-size: cover;
+    padding-top: 8%;
+    padding-bottom: 16%;
+    margin-bottom: 10%;
+
+    .bannerText{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1{
+            font-family: $font1;
+            font-size: 10rem;
+            color: white;
+        }
+
+        h2{
+            font-family: 'Asap Condensed', sans-serif;
+            font-size: 2.5rem;
+            color: white;
+            margin-top: 1%;
+        }
+    }
+    
+    .mainMenu{
+        display: flex;
+        justify-content: center;
+
+        ul{
+            display: flex;
+            flex-direction: wrap;
+            justify-content: space-around;
+            background-color: white;
+            width: 52%;
+
+            padding: 1.5%;
+            margin-top: 2%;
+            border-radius: 10px;
+
+            li{
+
+                a{
+                    font-family: 'Asap Condensed', sans-serif;
+                    font-weight: 700;
+                    color: $color1;
+                }
+                
+                a:hover{
+                    color: $color2;
+                }
+            }
+        }
+        
+    }
+    
+
+    
+}
+
+#artCategories{
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 13%;
+
+    .catTitle{
+        @include flexRow();
+        margin-bottom:1%;
+
+        .mainTitle{
+            @include setDefaultTexto();
+            font-weight: 500;
+            font-size: 60px;
+            margin-right: 1%;
+        }
+
+        .secMenu{
+
+            ul{
+                @include flexRow();
+            }
+
+            a{
+                @include aChiquitas()
+            }
+        }
+    }
+
+    .par{
+        @include setDefaultTexto();
+        @include setParTexto();
+        width: 90%;
+    }
+
+    .continueText{
+        color: #AE243B;
+        font-size: 15px;
+    }
+
+    .continueText:hover{
+        color:#415394;
+    }
+    
+    figure{
+        img{
+            margin-top: 3%;
+            height: 500px;
+            border-radius: 20px;
+        }
+
+        video{
+            margin-top: 3%;
+            border-radius: 20px;
+        }
+
+        figcaption{
+            text-align: start;
+
+        }
+
+        figcaption a{
+            font-family: 'Asap Condensed', sans-serif;
+            color:#AE243B;
+
+        }
+
+        img:hover{
+            filter: invert(100);
+        }
+    }
+
+    footer{
+
+        #footerTitle{
+            font-family: $font1;
+
+            color: white;
+            background-color: black;
+            padding-top: 3%;
+            padding-left: 3%;
+            padding-bottom: 7%;
+        }
+    }
+}
+
+/*Target*/
+#artCategories .tarjetas{
+    display: none;
+}
+  
+#artCategories .tarjetas:target{
+    display: inline-block;
+}
+
+
+
+
+

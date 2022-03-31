@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+:root {
+  background-color: white;
+}
+
+/*2. Estilos predefinidos*/
+@font-face {
+  font-family: Kare;
+  src: url("Kare.ttf") format("truetype");
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: white;
+}
+
+#mainPage {
+  background-image: url(../img/banner2.png);
+  background-position: top left;
+  background-size: cover;
+  padding-top: 8%;
+  padding-bottom: 16%;
+  margin-bottom: 10%;
+}
+
+#mainPage .bannerText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#mainPage .bannerText h1 {
+  font-family: Kare;
+  font-size: 10rem;
+  color: white;
+}
+
+#mainPage .bannerText h2 {
+  font-family: 'Asap Condensed', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 1%;
+}
+
+#mainPage .mainMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#mainPage .mainMenu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: wrap;
+          flex-direction: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: white;
+  width: 52%;
+  padding: 1.5%;
+  margin-top: 2%;
+  border-radius: 10px;
+}
+
+#mainPage .mainMenu ul li a {
+  font-family: 'Asap Condensed', sans-serif;
+  font-weight: 700;
+  color: #415394;
+}
+
+#mainPage .mainMenu ul li a:hover {
+  color: #AE243B;
+}
+
+#artCategories {
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-bottom: 13%;
+}
+
+#artCategories .tarjetas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  
+}
+
+#artCategories .catTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1%;
+}
+
+#artCategories .catTitle .mainTitle {
+  color: black;
+  font-family: 'Asap Condensed', sans-serif;
+  font-weight: 500;
+  font-size: 60px;
+  margin-right: 1%;
+}
+
+#artCategories .catTitle .secMenu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#artCategories .catTitle .secMenu a {
+  font-family: 'Asap Condensed', sans-serif;
+  font-weight: 600;
+  background-color: #415394;
+  color: white;
+  padding: 5px 13px;
+  margin-right: 7px;
+  border-radius: 8px;
+}
+
+#artCategories .par {
+  color: black;
+  font-family: 'Asap Condensed', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  width: 90%;
+}
+
+#artCategories .continueText {
+  color: #AE243B;
+  font-size: 15px;
+}
+
+#artCategories .continueText:hover {
+  color: #415394;
+}
+
+#artCategories figure img {
+  margin-top: 3%;
+  height: 500px;
+  border-radius: 20px;
+}
+
+#artCategories figure video{
+  margin-top: 3%;
+  border-radius: 20px;
+}
+
+#artCategories figure figcaption {
+  text-align: start;
+}
+
+#artCategories figure figcaption a {
+  font-family: 'Asap Condensed', sans-serif;
+  color: #AE243B;
+}
+
+#artCategories figure img:hover {
+  -webkit-filter: invert(100);
+          filter: invert(100);
+}
+
+footer #footerTitle{
+  font-family: Kare;
+  font-size: 100px;
+
+  color: white;
+  background-color: black;
+  padding-top: 3%;
+  padding-left: 3%;
+  padding-bottom: 7%;
+}
+
+/*Target*/
+#artCategories .tarjetas{
+  display: none;
+}
+
+#artCategories .tarjetas:target{
+  display: inline-block;
+}
+
+/*# sourceMappingURL=styles.css.map */
